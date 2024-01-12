@@ -1,5 +1,9 @@
 # Lab Report 1
 
-## cd
+## Command: "cd"
 
 ### No arguments
+```
+[user@sahara ~]$ cd
+[user@sahara ~]$
+```
