@@ -44,6 +44,11 @@ This output is an error because the "cd" command doesn't work with files as inpu
 lecture1
 [user@sahara ~]$ 
 ```
+Working directory: /home/
+
+When run with no inputs, the "ls" command lists the files in our current directory. This makes sense because combining our working directory ("/home/") with empty text yields our working directory again; really, having no arguments works exactly the same as having a path to another directory.
+
+This output is not an error.
 
 ### Using a directory as argument
 ```
@@ -51,6 +56,11 @@ lecture1
 Hello.class  Hello.java  messages  README
 [user@sahara ~]$ 
 ```
+Working directory: /home/
+
+The output is a list of all the files in the folder "lecture1". This happens because "ls" combines our working directory ("/home/") with the input ("lecture1") into a new file path ("/home/lecture1"); because this file path is a directory, it then prints all of the files in that directory.
+
+This output is not an error.
 
 ### Using a file as argument
 ```
@@ -58,6 +68,11 @@ Hello.class  Hello.java  messages  README
 lecture1/Hello.java
 [user@sahara ~]$ 
 ```
+Working directory: /home/
+
+The output this time is the absolute file path of the input file in our directory. The "ls" command combines our working directory with the input into "/home/lecture1/Hello.java", which it recognizes as a file and not a directory. Therefore, it only prints the path and doesn't try to print any of its contents.
+
+This output is not an error.
 
 ## Command: "cat"
 
@@ -65,6 +80,11 @@ lecture1/Hello.java
 ```
 [user@sahara ~]$ cat
 ```
+Working directory: /home/
+
+There is actually no output this time; in fact, the "cat" command with no arguments causes the terminal to go into an infinite loop, disallowing futher commands until you input "cmd-C". I don't know enough about "cat" to know exactly why this happened, but I imagine it's something along the lines of it trying to recursively input nothing into itself forever.
+
+I would imagine this has to be an error because entering into an infinite loop is something people usually want to avoid. However, there is no error message, and the developers of "cat" didn't handle the case of no arguments, so I suppose it could be considered intentional behavior in a sense.
 
 ### Using a directory as argument
 ```
@@ -72,6 +92,11 @@ lecture1/Hello.java
 cat: lecture1: Is a directory
 [user@sahara ~]$ 
 ```
+Working directory: /home/
+
+The output is an error message telling the user that their input isn't valid. This is because the "cat" command is meant to output the contents of files, but "/home/lecture1" is a directory (not a file). This means that the command can't print any contents, so it prints an error message instead.
+
+This is an error because the "cat" command is only meant to have files as input.
 
 ### Using a file as argument
 ```
@@ -88,3 +113,8 @@ public class Hello {
   }
 }[user@sahara ~]$ 
 ```
+Working directory: /home/
+
+The output is the contents of "/home/lecture1/Hello.java", which got printed because that's the absolute filepath you get after combining our working directory and the command input. Interestingly, there is no new line at the end of the output, so our next command prompt gets printed on the same line as the last closing curly bracket.
+
+This output is not an error.
