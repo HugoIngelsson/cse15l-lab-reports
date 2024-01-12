@@ -67,10 +67,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class Hello {
-  public static void main(String[] args) throws IOExc
-eption {
-    String content = Files.readString(Path.of(args[0]
-), StandardCharsets.UTF_8);    
+  public static void main(String[] args) throws IOException {
+    String content = Files.readString(Path.of(args[0]), StandardCharsets.UTF_8);    
     System.out.println(content);
   }
 }[user@sahara ~]$ 
