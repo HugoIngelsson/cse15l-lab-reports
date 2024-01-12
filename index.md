@@ -5,7 +5,7 @@
 **Bold**
 
 > This must be important
-> Because it's quoted?
+> because it's quoted?
 
 * What's a list
 * But another data structure?
