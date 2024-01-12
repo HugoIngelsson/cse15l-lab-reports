@@ -4,8 +4,7 @@
 *Italic*
 **Bold**
 
-> This must be important
-> because it's quoted?
+> This must be important because it's quoted?
 
 * What's a list
 * But another data structure?
