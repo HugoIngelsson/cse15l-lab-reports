@@ -9,6 +9,10 @@
 ```
 Working directory: /home/
 
+There was technically no output, thought it's important to look at the command prompt after the command finished executing. More precisely, the command prompt hasn't changed, which is because the "cd" command can't change the directory if you don't give it a directory to change to.
+
+This probably isn't considered an error because there weren't any errors printed for not giving the command any arguments.
+
 ### Using a directory as argument
 ```
 [user@sahara ~]$ cd lecture1
