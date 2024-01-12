@@ -18,6 +18,11 @@ This probably isn't considered an error because there weren't any errors printed
 [user@sahara ~]$ cd lecture1
 [user@sahara ~/lecture1]$
 ```
+Working directory: /home/
+
+Again, there technically isn't any output. However, this time we can see that the command prompt changed, which is because the "cd" command took our working directory ("/home/"), appended the argument we gave it ("lecture1") to that, and set the working directory to their combination ("/home/lecture1"). 
+
+Since the folder "lecture1" existed in our working directory, it didn't have any errors.
 
 ### Using a file as argument
 ```
@@ -25,6 +30,11 @@ This probably isn't considered an error because there weren't any errors printed
 bash: cd: lecture1/Hello.java: Not a directory
 [user@sahara ~]$ 
 ```
+Working directory: /home/
+
+This time, there was an actual output, which describes an error in how we used the "cd" command. Specifically, it can't take a file as an input because it doesn't make any sense to have our directory be a file.
+
+This output is an error because the "cd" command doesn't work with files as input; even though the file exists in our current directory, "cd" can't make it our working directory so it creates an error.
 
 ## Command: "ls"
 
