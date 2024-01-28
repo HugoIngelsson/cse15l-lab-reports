@@ -37,3 +37,6 @@ And this is how I accessed my public key. Note the only difference is that I use
 
 ![Login](fingerprint_login.png)
 Finally, this is a screenshot showing me logging into `ieng6` without the use of a password.
+
+## Part 3
+Something I learned this week was that you're able to not only log in to remote servers and edit their files using `ssh`, but that you can also copy files between servers using `scp`. I feel like this is a powerful tool that we can use to make our lives much easier. If I had to copy a file from one server to another before, I think the best solution I could have come up with was to upload the file to GitHub and then download it on the other server manually. Now, I see there's a much better way!
