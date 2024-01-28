@@ -6,7 +6,6 @@ Before describing the two screenshots, I wanted to also explain what happens whe
 ### Screenshot 1 (working example)
 
 ![Good use of Chat Server](correct_address.png)
-
 In this example, the handle(final HttpExchange exchange) method first gets called (as described above), which then calls handleRequest(URI uri) from ChatServer.java.
 
 In the handle() function, "exchange" is the parameter that lets the program speak to the server. It is what lets us ask for the URI using "exchange.getRequestURI()"; it is also what lets us write to the server by using "exchange.getResponseBody()".
@@ -20,7 +19,6 @@ After this specific request, the field "chat" had the String "jpolitz: So true\n
 ### Screenshot 2 (incorrect formatting)
 
 ![Bad use of Chat Server](wrong_address.png)
-
 In this example, the same functions are called as in the previous example. Furthermore, the parameters of the functions serve effectively the same purpose.
 
 That said, there is an important distinction between what "url.getPath()" returns now: "st=WRONG&user=FORMAT". Notably, whoever typed in this URL (me) accidentally put the first token of the query to be "st" instead of "s". This made the handleRequest() function unable to add a new message to the chat and instead print out an error message to the user.
@@ -28,3 +26,11 @@ That said, there is an important distinction between what "url.getPath()" return
 Since the program couldn't add anything to the chat, the values of the two fields stay exactly the same as they were before. In fact, the values they had were completely irrelevant this time when requesting the server since they never got accessed or changed.
 
 ## Part 2
+![Finding .ssh](cd_tab.png)
+I want to first note that `ls` actually doesn't show any files in my home directory starting with a period. I was able to see them instead by using `cd .` and then pressing tab, which shows possible follow-up files for me.
+
+![Private Key](private_key.png)
+This is how I accessed my private key. For obvious reasons, I'm only showing the first couple of lines out of the entire key.
+
+![Public Key](public_key.png)
+And this is how I accessed my public key. Note the only difference is that I used `cat id_rsa.pub` instead of `cat id_rsa`.
