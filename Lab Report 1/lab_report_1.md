@@ -90,7 +90,7 @@ not an error!
 ```
 Working directory: /home/
 
-When running the "cat" command with no inputs, the terminal enters into a loop where it prints out whatever you type into it until you exit with control-C. This happens because when the "cat" command has no inputs, it automatically sets the "file" it should print out to be the terminal; thus, anything typed into the terminal instantly gets printed out again.
+When running the "cat" command with no inputs, the terminal enters into a loop where it prints out whatever you type into it until you exit with control-C. This happens because when the "cat" command has no inputs, it automatically sets the "file" it should print out to be the terminal; thus, anything typed into the terminal instantly gets printed out again. Since the terminal technically never "ends", the only way to stop the cat command from looking for things to print is to force it to stop.
 
 This output is actually not an error, despite it seeming like it is.
 
