@@ -20,3 +20,9 @@ After this specific request, the field "chat" had the String "jpolitz: So true\n
 ### Screenshot 2 (incorrect formatting)
 
 ![Bad use of Chat Server](wrong_address.png)
+
+In this example, the same functions are called as in the previous example. Furthermore, the parameters of the functions serve effectively the same purpose.
+
+That said, there is an important distinction between what "url.getPath()" returns now: "st=WRONG&user=FORMAT". Notably, whoever typed in this URL (me) accidentally put the first token of the query to be "st" instead of "s". This made the handleRequest() function unable to add a new message to the chat and instead print out an error message to the user.
+
+Since the program couldn't add anything to the chat, the values of the two fields stay exactly the same as they were before. In fact, the values they had were completely irrelevant this time when requesting the server since they never got accessed or changed.
