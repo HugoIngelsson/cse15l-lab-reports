@@ -4,14 +4,14 @@
 
 ### No arguments
 ```
-[user@sahara ~]$ cd
-[user@sahara ~]$
+[user@sahara ~/lecture1]$ cd
+[user@sahara ~]$ 
 ```
-Working directory: /home/
+Working directory: /home/lecture1/
 
-There was technically no output, thought it's important to look at the command prompt after the command finished executing. More precisely, the command prompt hasn't changed, which is because the "cd" command can't change the directory if you don't give it a directory to change to.
+There was technically no output, thought it's important to look at the command prompt after the command finished executing. More precisely, the command prompt changed to be blank, with only a ~, which shows that the current working directory has been set to our root directory. This is because the "cd" command sets your current directory to the root directory when there is no input.
 
-This probably isn't considered an error because there weren't any errors printed for not giving the command any arguments.
+This output is not an error.
 
 ### Using a directory as argument
 ```
@@ -79,12 +79,20 @@ This output is not an error.
 ### No arguments
 ```
 [user@sahara ~]$ cat
+HI
+HI
+echo... echo.. echo
+echo... echo.. echo
+not an error!
+not an error!
+^C
+[user@sahara ~]$ 
 ```
 Working directory: /home/
 
-There is actually no output this time; in fact, the "cat" command with no arguments causes the terminal to go into an infinite loop, disallowing futher commands until you input "cmd-C". I don't know enough about "cat" to know exactly why this happened, but I imagine it's something along the lines of it trying to recursively input nothing into itself forever.
+When running the "cat" command with no inputs, the terminal enters into a loop where it prints out whatever you type into it until you exit with control-C. This happens because when the "cat" command has no inputs, it automatically sets the "file" it should print out to be the terminal; thus, anything typed into the terminal instantly gets printed out again.
 
-I would imagine this has to be an error because entering into an infinite loop is something people usually want to avoid. However, there is no error message, and the developers of "cat" didn't handle the case of no arguments, so I suppose it could be considered intentional behavior in a sense.
+This output is actually not an error, despite it seeming like it is.
 
 ### Using a directory as argument
 ```
