@@ -34,3 +34,6 @@ This is how I accessed my private key. For obvious reasons, I'm only showing the
 
 ![Public Key](public_key.png)
 And this is how I accessed my public key. Note the only difference is that I used `cat id_rsa.pub` instead of `cat id_rsa`.
+
+![Login](fingerprint_login.png)
+Finally, this is a screenshot showing me logging into `ieng6` without the use of a password.
