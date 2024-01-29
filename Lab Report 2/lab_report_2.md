@@ -1,6 +1,50 @@
 # Lab Report 2
 
 ## Part 1
+
+### ChatServer.java
+This is the code for my Chat Server:
+```
+class Handler implements URLHandler {
+    private final String INCORRECT_FORMAT = "Incorrect format: Use \"/add-message?s=<message>&user=<username>\"";
+
+    String chat = "";
+    int chatNumber = 0;
+
+    public String handleRequest(URI url) {
+        if (url.getPath().equals("/")) {
+            return chat;
+        } else if (url.getPath().equals("/add-message")) {
+            String query = url.getQuery();
+            if (query.startsWith("s=")) {
+                String[] queryParts = query.split("&");
+
+                if (queryParts.length >= 2) {
+                    if (!queryParts[1].startsWith("user=")) {
+                        return INCORRECT_FORMAT;
+                    }
+
+                    String[] message = queryParts[0].split("=");
+                    String[] user = queryParts[1].split("=");
+
+                    chatNumber++; // just here because I think it's nice to keep track of
+                    chat = chat.concat(String.format("%s: %s\n", user[1], message[1]));
+                    return chat;
+                }
+                else {
+                    return "Missing username!";
+                }
+            }
+            else {
+                return INCORRECT_FORMAT;
+            }
+        } else {
+            return "404 Not Found!";
+        }
+    }
+}
+```
+
 Before describing the two screenshots, I wanted to also explain what happens when the server starts up since that's also running a few methods. First, on running ChatServer.java, its main method starts a server from the Server.start() method with the port number used as a command line argument, along with a new Handler() object. When Server.start() runs, it creates a new HttpServer(), which then creates a new context for the Handler() passed in. Then, whenever a new webpage is loaded, the context runs a handle() method, which handles the URI using the Handler() object and prints out something for the user to look at.
 
 ### Screenshot 1 (working example)
@@ -30,10 +74,10 @@ Since the program couldn't add anything to the chat, the values of the two field
 I want to first note that `ls` actually doesn't show any files in my home directory starting with a period. I was able to see them instead by using `cd .` and then pressing tab, which shows possible follow-up files for me.
 
 ![Private Key](private_key.png)
-This is how I accessed my private key. For obvious reasons, I'm only showing the first couple of lines out of the entire key.
+This is how I accessed my private key. For obvious reasons, I'm only showing the first couple of lines out of the entire key. Absolute path to private key: `~/.ssh/id_rsa`
 
 ![Public Key](public_key.png)
-And this is how I accessed my public key. Note the only difference is that I used `cat id_rsa.pub` instead of `cat id_rsa`.
+And this is how I accessed my public key. Note the only difference is that I used `cat id_rsa.pub` instead of `cat id_rsa`. Absolute path to public key: `~/.ssh/id_rsa.pub`
 
 ![Login](fingerprint_login.png)
 Finally, this is a screenshot showing me logging into `ieng6` without the use of a password.
