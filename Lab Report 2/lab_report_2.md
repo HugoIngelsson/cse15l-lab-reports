@@ -77,7 +77,7 @@ I want to first note that `ls` actually doesn't show any files in my home direct
 This is how I accessed my private key. For obvious reasons, I'm only showing the first couple of lines out of the entire key. Absolute path to private key: `~/.ssh/id_rsa`
 
 ![Public Key](public_key.png)
-And this is how I accessed my public key. Note the only difference is that I used `cat id_rsa.pub` instead of `cat id_rsa`. Absolute path to public key: `~/.ssh/id_rsa.pub`
+And this is how I accessed my public key. Absolute path to public key on ieng6: `~/.ssh/authorized_keys`
 
 ![Login](fingerprint_login.png)
 Finally, this is a screenshot showing me logging into `ieng6` without the use of a password.
