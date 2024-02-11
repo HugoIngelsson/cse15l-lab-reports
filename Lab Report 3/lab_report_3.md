@@ -44,3 +44,35 @@ public void testFilter2() {
 
 ![Symptom](symptom.png)
 As you can see, only testFilter1 runs into an error (there are also some test cases for other methods that pass), ending up with the reverse list of what we'd expect.
+
+### The Bug
+
+Code before:
+```
+static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+        if(sc.checkString(s)) {
+            result.add(0, s);
+        }
+    }
+    return result;
+}
+```
+
+Code after:
+```
+static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+        if(sc.checkString(s)) {
+            result.add(s);
+        }
+    }
+    return result;
+}
+```
+
+The bug fix was to change `result.add(0, s)` into `result.add(s)`, which makes the filter add each item to the end of the list instead of the start. This fixes the issue because we want the returned list to have each item in the order they originally occurred in the input list; adding items to the start of the list wrongly reverses the order. The non-failing input still gave the correct answer because its result is a palindrome.
+
+## Part 2
