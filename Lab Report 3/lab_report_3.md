@@ -39,3 +39,8 @@ public void testFilter2() {
     assertEquals(expected, ListExamples.filter(list, new CheckHasA()));
 }
 ```
+
+### Symptom
+
+![Symptom](symptom.png)
+As you can see, only testFilter1 runs into an error (there are also some test cases for other methods that pass), ending up with the reverse list of what we'd expect.
