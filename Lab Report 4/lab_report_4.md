@@ -10,7 +10,8 @@ This is the `ssh` command we've learned how to do in previous labs; it connects 
 ## Cloning my fork
 ![Clone fork](git_clone.png)
 Keys pressed: `cs15lwi24<enter>`, then `git clone git@github.com:HugoIngelsson/cse15l-lab7.git<enter>`
-..Explanation..
+
+The first command I ran simply put me into the correct workspace since I want anything I download for this class to be contained in this class's workspace, `cs15lwi24`. The second command cloned my fork using the SSH key that I connected to GitHub from my `ieng6` account. 
 
 ## Running the tests, with failures
 ![Failed test](test_failure.png)
