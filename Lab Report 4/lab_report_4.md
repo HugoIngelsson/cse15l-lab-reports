@@ -8,25 +8,25 @@ Keys pressed: `ssh cingelsson@ieng6-201.ucsd.edu<enter>`
 
 ## Cloning my fork
 ..Image..
-Keys pressed: 
+Keys pressed: `cs15lwi24<enter>`, then `git clone git@github.com:HugoIngelsson/cse15l-lab7.git<enter>`
 ..Explanation..
 
 ## Running the tests, with failures
 ..Image..
-Keys pressed: 
+Keys pressed: `cd cse15l-lab7<enter>`, then `bash test.sh<enter>`
 ..Explanation..
 
 ## Editing the code file
 ..Image..
-Keys pressed: 
+Keys pressed: `vim ListExamples.java<enter>`, then `?1<enter>nr2<esc>:wq<enter>`
 ..Explanation..
 
 ## Running the tests, without failures
 ..Image..
-Keys pressed: 
+Keys pressed: `bash test.sh<enter>`
 ..Explanation..
 
 ## Committing and pushing the change to GitHub
 ..Image..
-Keys pressed: 
+Keys pressed: `git add ListExamples.java<enter>`, then `git commit -m "Code fix<enter>", and then finally `git push`
 ..Explanation..
