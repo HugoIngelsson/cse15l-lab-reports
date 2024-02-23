@@ -4,7 +4,8 @@ For this lab, I'll be going through the steps I went through to fix a bug in a p
 ## Logging into ieng6
 ![Log into ieng6](ssh.png)
 Keys pressed: `ssh cingelsson@ieng6-201.ucsd.edu<enter>`
-..Explanation..
+
+This is the `ssh` command we've learned how to do in previous labs; it connects us to the remote `ieng6` server using my account, `cingelsson`. Since we've already entered an RSA key into the account, there's no need to verify my identity when using this computer. Notably, I `ssh` into `ieng6-201` in particular here because there's otherwise a chance that I get sent into `ieng6-203`, which for some reason doesn't have access to `javac`.
 
 ## Cloning my fork
 ![Clone fork](git_clone.png)
