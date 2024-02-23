@@ -2,7 +2,7 @@
 For this lab, I'll be going through the steps I went through to fix a bug in a program.
 
 ## Logging into ieng6
-..Image..
+![Log into ieng6](ssh.png)
 Keys pressed: `ssh cingelsson@ieng6-201.ucsd.edu<enter>`
 ..Explanation..
 
@@ -13,7 +13,7 @@ Keys pressed: `cs15lwi24<enter>`, then `git clone git@github.com:HugoIngelsson/c
 
 ## Running the tests, with failures
 ..Image..
-Keys pressed: `cd cse15l-lab7<enter>`, then `bash test.sh<enter>`
+Keys pressed: `cd cse15l-lab7/<enter>`, then `bash test.sh<enter>`
 ..Explanation..
 
 ## Editing the code file
