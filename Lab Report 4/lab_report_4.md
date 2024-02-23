@@ -28,5 +28,5 @@ Keys pressed: `bash test.sh<enter>`
 
 ## Committing and pushing the change to GitHub
 ..Image..
-Keys pressed: `git add ListExamples.java<enter>`, then `git commit -m "Code fix<enter>", and then finally `git push`
+Keys pressed: `git add ListExamples.java<enter>`, then `git commit -m "Code fix<enter>"`, and then finally `git push`
 ..Explanation..
