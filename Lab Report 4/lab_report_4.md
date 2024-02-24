@@ -39,6 +39,6 @@ This is the same command as from before, but now when I run the `test.sh` script
 
 ## Committing and pushing the change to GitHub
 ![Adding, committing, and pushing](add_commit_push.png)
-Keys pressed: `git add ListExamples.java<enter>`, then `git commit -m "Code fix<enter>"`, and then finally `git push`
+Keys pressed: `git add ListExamples.java<enter>`, then `git commit -m "Code fix<enter>"`, and then finally `git push<enter>`
 
 Finally, I want to commit and push the changes I've made to GitHub. To do so, I first use `git add` to add `ListExamples.java` to the files that will be included in my next `commit`. Then, I use `git commit` with the message `"Code fix"` to get git ready to push the changes I want to GitHub. Anyone looking at the past commit history of this fork will be able to see the message I sent with it, so really I should have sent something more descriptive than "Code fix" so that people can understand what I did. Finally, I use `git push` to send this change to GitHub so that anyone else with access to the fork can download it.
