@@ -16,12 +16,20 @@ The first command I ran simply put me into the correct workspace since I want an
 ## Running the tests, with failures
 ![Failed test](test_failure.png)
 Keys pressed: `cd cse15l-lab7/<enter>`, then `bash test.sh<enter>`
-..Explanation..
+
+The first command put me into the correct working directory, `cse15l-lab7/`, which will be helpful because it cuts out typing the directory every time I want to run a command in it. The second command ran the bash file `test.sh`, which compiles and runs `ListExamples.java` using `javac` then `java`. As a result of running this command, I can now see that there's a bug in `ListExamples.java`.
 
 ## Editing the code file
 ![Using vim](vim.png)
 Keys pressed: `vim ListExamples.java<enter>`, then `?1<enter>nr2<esc>:wq<enter>`
-..Explanation..
+
+Running `vim` on `ListExamples.java` put me into the terminal editor, editing `ListExamples.java`. The next series of key-presses are cryptic, but they're also a very efficient way of fixing the bug.
+
+First, typing in `?` tells `vim` I want to search for something from the back (as opposed to `/`, which searches from the front). Then, typing in `1` and pressing enter means that I want to search for all occurrences of `1`, starting from the back.
+
+I then press `n` once to skip the first occurrence of `1` and go to the second one. There, I press `r`, which means to replace the character the cursor is currently on, and then `2`. In all, this replaces the second-to-last `1` with a `2`, fixing the variable name in the file.
+
+Finally, we want to exit `vim`. To do that, I first press `<esc>` to exit insertion mode, then I press `:wq`, which tells `vim` to first write to file (i.e. save) and then quit, returning me back to the terminal.
 
 ## Running the tests, without failures
 ![Successful tests](test_success.png)
