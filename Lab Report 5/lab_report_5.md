@@ -4,4 +4,5 @@ In this lab report, I'll be creating an imaginary scenario where a student has a
 ## Debugging Scenario
 ---
 <span style="color:red">Peliz Hjelpme</span>
+
 3 hours ago in <span style="color:blue">General</span>
