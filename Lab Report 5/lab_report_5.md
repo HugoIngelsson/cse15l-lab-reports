@@ -122,4 +122,70 @@ root
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L--MainTester.java  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L--test.sh
 
+Everything in the `lib` directory is just there to run JUnit tests and is nothing out of the ordinary from what we've done in class.
 
+This is what's contained in `Main.java`:
+```
+public class Main {
+    public static String out = "";
+
+    public static void main(String[] args) {
+        out = "";
+        
+        for (String s : args) {
+            out += s + "\n";
+        }
+
+        System.out.println(out);
+    }
+}
+```
+
+This is what's contained in `MainTester.java`:
+```
+import org.junit.*;
+import static org.junit.Assert.*;
+
+public class MainTester {
+    @Test
+    public void testMain1() {
+        String[] in = {
+            "aaaa", "bb", "", "d"
+        };
+        Main.main(in);
+
+        assertEquals("aaaa\nbb\n\nd\n",
+                    Main.out);
+    }
+
+    @Test
+    public void testMain2() {
+        String[] in = {
+            "",
+        };
+        Main.main(in);
+
+        assertEquals("\n",
+                    Main.out);
+    }
+
+    @Test
+    public void testMain3() {
+        String[] in = {
+            "\n\n\n", "\t", "yay", "!!!"
+        };
+        Main.main(in);
+
+        assertEquals("\n\n\n\n\t\nyay\n!!!\n",
+                    Main.out);
+    }
+}
+```
+
+And this is what's initially contained in `test.sh`:
+```
+CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
+
+javac -cp $CPATH *.java
+java -cp $CPATH org.junit.runner.JUnitCore MainTester
+```
