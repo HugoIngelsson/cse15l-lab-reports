@@ -3,10 +3,10 @@ In this lab report, I'll be creating an imaginary scenario where a student has a
 
 ## Debugging Scenario
 ---  
-<span style="color:red">Peliz Hjelpme</span>  
+<span style="color:red">Peliz Hjelpmi</span>  
 3 hours ago in <span style="color:blue">General</span>
 
-Hello,  
+Hi,  
 I have a bug for this week's PA that I am unsure how to solve. I've been looking online for hours at this point and really cannot see what I did wrong. This is what the terminal tells me at this point:
 
 ```
@@ -60,3 +60,17 @@ CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
 javac -cp $CPATH *.java
 java -cp $CPATH org.junit.runner.JUnitCore MainTester
 ```
+I'm really stressed about this and would love some help. Does anyone have any solutions to my problem?
+
+---
+<span style="color:red">Ghood Tudor</span> STAFF  
+2 hours ago
+
+Hello Peliz!
+
+It would be nice to know a little bit more about your file structure and what the Java files look like, but I will try to help you to the best of my ability right now. Here are a couple of things you might want to check:  
+1. Are you in the right directory when you run the bash script? If you are running it from some other directory (i.e. using "bash <path>/test.sh"), the class path might not work as intended.
+2. Is the path to your "lib" directory correct in your class path? If "lib" is in another directory than the one you run your bash script from, you might need to edit your class path.
+3. Are there any typos in your Java files? If you get to this step, this is about the only thing I can think of without knowing more about your file structure.
+
+I hope this helps! Please respond with more information if you're still stuck.
