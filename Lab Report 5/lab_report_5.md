@@ -114,12 +114,12 @@ This is a description of the setup needed to achieve this bug and then fix it.
 File structure:
 
 root  
-  \tL--lib  
-        L--hamcrest-core-1.3.jar  
-        L--junit-4.13.2.jar  
-    L--src  
-        L--Main.java  
-        L--MainTester.java  
-        L--test.sh
+&nbsp;&nbsp;&nbsp;&nbsp;L--lib  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L--hamcrest-core-1.3.jar  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L--junit-4.13.2.jar  
+&nbsp;&nbsp;&nbsp;&nbsp;L--src  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L--Main.java  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L--MainTester.java  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L--test.sh
 
 
