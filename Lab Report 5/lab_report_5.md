@@ -114,7 +114,7 @@ This is a description of the setup needed to achieve this bug and then fix it.
 File structure:
 
 root  
-    L--lib  
+  \tL--lib  
         L--hamcrest-core-1.3.jar  
         L--junit-4.13.2.jar  
     L--src  
