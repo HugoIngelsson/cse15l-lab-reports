@@ -51,3 +51,12 @@ MainTester.java:34: error: cannot find symbol
 Error: Could not find or load main class org.junit.runner.JUnitCore
 Caused by: java.lang.ClassNotFoundException: org.junit.runner.JUnitCore
 ```
+I think the bash program that I run can't find the JUnit files needed to run the tests for some reason. But this doesn't make any sense to me! I have downloaded the "lib" folder like we always do in class, and I use "-cp" when I run both "javac" and "java". Furthermore, I use the class path we always use and copied it over from a previous PA, so I know I didn't make any typo mistakes.
+
+This is what my bash script looks like:
+```
+CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
+
+javac -cp $CPATH *.java
+java -cp $CPATH org.junit.runner.JUnitCore MainTester
+```
