@@ -193,3 +193,6 @@ java -cp $CPATH org.junit.runner.JUnitCore MainTester
 The command run to trigger the bug is simply `bash test.sh` while within the `src` directory (running it outside of the `src` directory will lead to other bugs relating to not finding the MainTester file).
 
 As Peliz described, all needed to fix the bug was a single line change. Namely, `CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'` in `test.sh` should really be `CPATH='.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar'` so that the program knows where to look for the JUnit files.
+
+## Reflection
+During the second half of this quarter, I learned many useful commands from the terminal that allows you to exist purely without more than the command line. Especially useful is the things we learned about `vim`. I already knew some slight bits about `vim`, but that knowledge was pretty much limited to entering insertion mode and writing/quitting the program. I think out of `vim`'s keybinds, my favorite has to be `V` and `v`. I've done work on a Raspberry Pi before without a visual interface, and there were times I had to delete entire lines of code by holding delete for like a minute straight; knowing that there are ways to selected lines much more efficiently to then delete them would have saved me so much time.
