@@ -111,12 +111,15 @@ Turns out that when I was running the bash script from my "src" directory, it co
 ### Setup Description
 This is a description of the setup needed to achieve this bug and then fix it.
 
-File structure:  
-root
-    L--lib
-        L--hamcrest-core-1.3.jar
-        L--junit-4.13.2.jar
-    L--src
-        L--Main.java
-        L--MainTester.java
+File structure:
+
+root  
+    L--lib  
+        L--hamcrest-core-1.3.jar  
+        L--junit-4.13.2.jar  
+    L--src  
+        L--Main.java  
+        L--MainTester.java  
         L--test.sh
+
+
