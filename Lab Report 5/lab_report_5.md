@@ -74,3 +74,36 @@ It would be nice to know a little bit more about your file structure and what th
 3. Are there any typos in your Java files? If you get to this step, this is about the only thing I can think of without knowing more about your file structure.
 
 I hope this helps! Please respond with more information if you're still stuck.
+
+---
+<span style="color:red">Peliz Hjelpmi</span>  
+1 minute ago
+
+Hi yes thank you so much for your help
+
+Potential issue 1 didn't work but number 2 did. I managed to get it to work, look:
+```
+Peliz@Peliz-Laptop src % bash test.sh
+JUnit version 4.13.2
+.aaaa
+bb
+
+d
+
+.
+
+.
+
+
+
+
+yay
+!!!
+
+
+Time: 0.007
+
+OK (3 tests)
+```
+
+Turns out that when I was running the bash script from my "src" directory, it couldn't find a "lib" directory within it. What I needed to do was change my CPATH to put "../" before "lib" so that it went back a level to where the "lib" directory exists.
