@@ -2,7 +2,6 @@
 In this lab report, I'll be creating an imaginary scenario where a student has a bug in their code and gets help from EdStem. Then I'll describe something I've learned in CSE 15L.
 
 ## Debugging Scenario
----  
 <span style="color:red">Peliz Hjelpmi</span>  
 3 hours ago in <span style="color:blue">General</span>
 
@@ -107,3 +106,17 @@ OK (3 tests)
 ```
 
 Turns out that when I was running the bash script from my "src" directory, it couldn't find a "lib" directory within it. What I needed to do was change my CPATH to put "../" before "lib" so that it went back a level to where the "lib" directory exists.
+
+---
+### Setup Description
+This is a description of the setup needed to achieve this bug and then fix it.
+
+File structure:  
+root
+    L--lib
+        L--hamcrest-core-1.3.jar
+        L--junit-4.13.2.jar
+    L--src
+        L--Main.java
+        L--MainTester.java
+        L--test.sh
