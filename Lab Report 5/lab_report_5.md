@@ -189,3 +189,7 @@ CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
 javac -cp $CPATH *.java
 java -cp $CPATH org.junit.runner.JUnitCore MainTester
 ```
+
+The command run to trigger the bug is simply `bash test.sh` while within the `src` directory (running it outside of the `src` directory will lead to other bugs relating to not finding the MainTester file).
+
+As Peliz described, all needed to fix the bug was a single line change. Namely, `CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'` in `test.sh` should really be `CPATH='.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar'` so that the program knows where to look for the JUnit files.
